@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GST Calculator — Add or Remove GST Instantly | ReadReco Tools</title>
+<meta name="description" content="Free GST calculator to add GST to a base amount or remove GST from a GST-inclusive price, with 5%, 12%, 18%, and 28% presets.">
+<link rel="canonical" href="https://www.readreco.in/gst-calculator.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="GST Calculator — Add or Remove GST Instantly | ReadReco Tools">
+<meta property="og:description" content="Free GST calculator to add GST to a base amount or remove GST from a GST-inclusive price, with 5%, 12%, 18%, and 28% presets.">
+<meta property="og:url" content="https://www.readreco.in/gst-calculator.html">
+<meta property="og:site_name" content="ReadReco Tools">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GST Calculator — Add or Remove GST Instantly | ReadReco Tools">
+<meta name="twitter:description" content="Free GST calculator to add GST to a base amount or remove GST from a GST-inclusive price, with 5%, 12%, 18%, and 28% presets.">
+
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "GST Calculator",
+  "url": "https://www.readreco.in/gst-calculator.html",
+  "description": "Free GST calculator to add GST to a base amount or remove GST from a GST-inclusive price, with 5%, 12%, 18%, and 28% presets.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I add 18% GST to an amount?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Multiply the amount by 0.18 to get the GST amount, then add it to the original amount." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I remove GST from a total price?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Divide the total price by (1 + GST rate/100) to get the base price before GST." }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the standard GST rates in India?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The most common GST slabs are 5%, 12%, 18%, and 28%, depending on the product or service category." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">ReadReco<span>.</span></a>
+    <div class="nav-links">
+      <a href="blog.html">Blog</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☾</button>
+    </div>
+  </div>
+</header>
+
+<nav class="breadcrumb"><a href="index.html">Home</a> &rsaquo; GST Calculator</nav>
+
+<main>
+  <section class="hero mini-hero">
+    <h1>GST Calculator</h1>
+    <p class="hero-sub">Add GST to a base price, or remove GST from a GST-inclusive amount — pick a preset rate or enter a custom one.</p>
+  </section>
+
+  <section class="tool-shell">
+    <nav class="tool-nav">
+      <a href="percentage-calculator.html" class="">Percentage Calculator</a>
+      <a href="emi-calculator.html" class="">EMI Calculator</a>
+      <a href="gst-calculator.html" class="current">GST Calculator</a>
+      <a href="age-calculator.html" class="">Age Calculator</a>
+      <a href="discount-calculator.html" class="">Discount Calculator</a>
+      <a href="salary-calculator.html" class="">Salary Calculator</a>
+    </nav>
+
+    <section class="panel active" id="gst">
+      <div class="mode-row">
+        <button class="mode-btn active" data-mode="gst-add">Add GST</button>
+        <button class="mode-btn" data-mode="gst-remove">Remove GST</button>
+      </div>
+      <div class="field-row">
+        <label>Amount (₹) <input type="number" id="gstAmount" value="1000"></label>
+      </div>
+      <div class="field-row rate-select">
+        <span>GST rate:</span>
+        <button class="rate-btn" data-rate="5">5%</button>
+        <button class="rate-btn active" data-rate="12">12%</button>
+        <button class="rate-btn" data-rate="18">18%</button>
+        <button class="rate-btn" data-rate="28">28%</button>
+        <input type="number" id="gstCustomRate" placeholder="Custom %" style="width:90px">
+      </div>
+      <div class="result-grid">
+        <div class="result-card"><span>GST amount</span><strong id="gstAmountOut">₹0</strong></div>
+        <div class="result-card"><span>Final amount</span><strong id="gstFinal">₹0</strong></div>
+      </div>
+      <button class="copy-btn" data-copy-target="gst">Copy result</button>
+    </section>
+  </section>
+
+  <article class="seo-content">
+    <h2>How to add GST</h2>
+    <p>To add GST to a base price, multiply the base amount by the GST rate divided by 100, then add that to the base amount. For example, adding 18% GST to ₹1,000 gives ₹180 in GST, for a final amount of ₹1,180.</p>
+    <h2>How to remove GST from an inclusive price</h2>
+    <p>If a price already includes GST and you need to find the base amount, divide the total by (1 + GST rate ÷ 100). For a GST-inclusive price of ₹1,180 at 18%, the base price is ₹1,180 ÷ 1.18 = ₹1,000.</p>
+    <h2>Common GST slabs in India</h2>
+    <p>India uses four main GST slabs — 5%, 12%, 18%, and 28% — applied depending on the category of goods or services. This calculator includes all four as quick presets, plus a custom rate field for anything else.</p>
+  </article>
+
+  <section class="faq-section">
+    <h2>Frequently asked questions</h2>
+    <div class="faq-item">
+        <h3>How do I add 18% GST to an amount?</h3>
+        <p>Multiply the amount by 0.18 to get the GST amount, then add it to the original amount.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I remove GST from a total price?</h3>
+        <p>Divide the total price by (1 + GST rate/100) to get the base price before GST.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What are the standard GST rates in India?</h3>
+        <p>The most common GST slabs are 5%, 12%, 18%, and 28%, depending on the product or service category.</p>
+      </div>
+  </section>
+
+  <section class="related-tools">
+    <h2>Related calculators</h2>
+    <ul>
+        <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+        <li><a href="emi-calculator.html">EMI Calculator</a></li>
+        <li><a href="age-calculator.html">Age Calculator</a></li>
+        <li><a href="discount-calculator.html">Discount Calculator</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>ReadReco Tools — built for speed, not sign-ups.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

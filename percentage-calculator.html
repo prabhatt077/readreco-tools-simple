@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Percentage Calculator — Find % of a Number, Increase & Decrease | ReadReco Tools</title>
+<meta name="description" content="Free percentage calculator. Find what X% of Y is, calculate percentage increase, decrease, or difference between two numbers instantly.">
+<link rel="canonical" href="https://www.readreco.in/percentage-calculator.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Percentage Calculator — Find % of a Number, Increase & Decrease | ReadReco Tools">
+<meta property="og:description" content="Free percentage calculator. Find what X% of Y is, calculate percentage increase, decrease, or difference between two numbers instantly.">
+<meta property="og:url" content="https://www.readreco.in/percentage-calculator.html">
+<meta property="og:site_name" content="ReadReco Tools">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Percentage Calculator — Find % of a Number, Increase & Decrease | ReadReco Tools">
+<meta name="twitter:description" content="Free percentage calculator. Find what X% of Y is, calculate percentage increase, decrease, or difference between two numbers instantly.">
+
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Percentage Calculator",
+  "url": "https://www.readreco.in/percentage-calculator.html",
+  "description": "Free percentage calculator. Find what X% of Y is, calculate percentage increase, decrease, or difference between two numbers instantly.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is 20% of 500?",
+      "acceptedAnswer": { "@type": "Answer", "text": "20% of 500 is 100, calculated as (20 ÷ 100) × 500." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate percentage increase?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Subtract the original value from the new value, divide by the original value, then multiply by 100." }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between percentage change and percentage difference?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Percentage change compares a new value to an original value (directional). Percentage difference compares two values against their average and has no direction." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">ReadReco<span>.</span></a>
+    <div class="nav-links">
+      <a href="blog.html">Blog</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☾</button>
+    </div>
+  </div>
+</header>
+
+<nav class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Percentage Calculator</nav>
+
+<main>
+  <section class="hero mini-hero">
+    <h1>Percentage Calculator</h1>
+    <p class="hero-sub">Four calculators in one: X% of Y, percentage increase, decrease, and difference — updates as you type.</p>
+  </section>
+
+  <section class="tool-shell">
+    <nav class="tool-nav">
+      <a href="percentage-calculator.html" class="current">Percentage Calculator</a>
+      <a href="emi-calculator.html" class="">EMI Calculator</a>
+      <a href="gst-calculator.html" class="">GST Calculator</a>
+      <a href="age-calculator.html" class="">Age Calculator</a>
+      <a href="discount-calculator.html" class="">Discount Calculator</a>
+      <a href="salary-calculator.html" class="">Salary Calculator</a>
+    </nav>
+
+    <section class="panel active" id="percentage">
+      <div class="mode-row">
+        <button class="mode-btn active" data-mode="p-of">X% of Y</button>
+        <button class="mode-btn" data-mode="p-inc">% Increase</button>
+        <button class="mode-btn" data-mode="p-dec">% Decrease</button>
+        <button class="mode-btn" data-mode="p-diff">% Difference</button>
+      </div>
+      <div class="mode-panel active" data-mode-panel="p-of">
+        <div class="field-row">
+          <label>What is <input type="number" id="p1a" value="20"> % of <input type="number" id="p1b" value="500"></label>
+        </div>
+        <div class="result" id="p1result">= 100</div>
+      </div>
+      <div class="mode-panel" data-mode-panel="p-inc">
+        <div class="field-row">
+          <label>From <input type="number" id="p2a" value="100"> to <input type="number" id="p2b" value="150"></label>
+        </div>
+        <div class="result" id="p2result">= 50% increase</div>
+      </div>
+      <div class="mode-panel" data-mode-panel="p-dec">
+        <div class="field-row">
+          <label>From <input type="number" id="p3a" value="150"> to <input type="number" id="p3b" value="100"></label>
+        </div>
+        <div class="result" id="p3result">= 33.33% decrease</div>
+      </div>
+      <div class="mode-panel" data-mode-panel="p-diff">
+        <div class="field-row">
+          <label>Value A <input type="number" id="p4a" value="80"> Value B <input type="number" id="p4b" value="100"></label>
+        </div>
+        <div class="result" id="p4result">= 22.22% difference</div>
+      </div>
+      <button class="copy-btn" data-copy-target="percentage">Copy result</button>
+    </section>
+  </section>
+
+  <article class="seo-content">
+    <h2>How the percentage calculator works</h2>
+    <p>Percentages describe a part of a whole out of 100. This tool covers the four most common percentage problems people search for. To find X% of Y, we multiply Y by X divided by 100 — so 20% of 500 is (20/100) × 500 = 100.</p>
+    <h2>Percentage increase and decrease</h2>
+    <p>To find a percentage increase from an old value to a new value, we take the difference, divide by the original value, and multiply by 100. Percentage decrease works the same way in reverse. Percentage difference is slightly different — it compares two values against their average, which is useful when neither number is clearly the "original."</p>
+    <h2>Worked example</h2>
+    <p>Say your salary went from ₹40,000 to ₹46,000. The increase is ₹6,000, divided by the original ₹40,000, times 100 — a 15% increase.</p>
+  </article>
+
+  <section class="faq-section">
+    <h2>Frequently asked questions</h2>
+    <div class="faq-item">
+        <h3>What is 20% of 500?</h3>
+        <p>20% of 500 is 100, calculated as (20 ÷ 100) × 500.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I calculate percentage increase?</h3>
+        <p>Subtract the original value from the new value, divide by the original value, then multiply by 100.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What's the difference between percentage change and percentage difference?</h3>
+        <p>Percentage change compares a new value to an original value (directional). Percentage difference compares two values against their average and has no direction.</p>
+      </div>
+  </section>
+
+  <section class="related-tools">
+    <h2>Related calculators</h2>
+    <ul>
+        <li><a href="emi-calculator.html">EMI Calculator</a></li>
+        <li><a href="gst-calculator.html">GST Calculator</a></li>
+        <li><a href="age-calculator.html">Age Calculator</a></li>
+        <li><a href="discount-calculator.html">Discount Calculator</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>ReadReco Tools — built for speed, not sign-ups.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

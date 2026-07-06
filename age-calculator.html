@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Age Calculator — Exact Age in Years, Months & Days | ReadReco Tools</title>
+<meta name="description" content="Free age calculator. Enter your date of birth to get your exact age in years, months, and days, plus a countdown to your next birthday.">
+<link rel="canonical" href="https://www.readreco.in/age-calculator.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Age Calculator — Exact Age in Years, Months & Days | ReadReco Tools">
+<meta property="og:description" content="Free age calculator. Enter your date of birth to get your exact age in years, months, and days, plus a countdown to your next birthday.">
+<meta property="og:url" content="https://www.readreco.in/age-calculator.html">
+<meta property="og:site_name" content="ReadReco Tools">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Age Calculator — Exact Age in Years, Months & Days | ReadReco Tools">
+<meta name="twitter:description" content="Free age calculator. Enter your date of birth to get your exact age in years, months, and days, plus a countdown to your next birthday.">
+
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Age Calculator",
+  "url": "https://www.readreco.in/age-calculator.html",
+  "description": "Free age calculator. Enter your date of birth to get your exact age in years, months, and days, plus a countdown to your next birthday.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why not just divide my age in days by 365?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Because months vary in length and leap years add extra days, dividing by 365 can miscalculate your age by several days. Calendar-based subtraction is accurate." }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I was born on February 29?",
+      "acceptedAnswer": { "@type": "Answer", "text": "In non-leap years, your birthday countdown rolls to the nearest equivalent date, since February 29 doesn't exist every year." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">ReadReco<span>.</span></a>
+    <div class="nav-links">
+      <a href="blog.html">Blog</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☾</button>
+    </div>
+  </div>
+</header>
+
+<nav class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Age Calculator</nav>
+
+<main>
+  <section class="hero mini-hero">
+    <h1>Age Calculator</h1>
+    <p class="hero-sub">Enter your date of birth to see your exact age and how many days remain until your next birthday.</p>
+  </section>
+
+  <section class="tool-shell">
+    <nav class="tool-nav">
+      <a href="percentage-calculator.html" class="">Percentage Calculator</a>
+      <a href="emi-calculator.html" class="">EMI Calculator</a>
+      <a href="gst-calculator.html" class="">GST Calculator</a>
+      <a href="age-calculator.html" class="current">Age Calculator</a>
+      <a href="discount-calculator.html" class="">Discount Calculator</a>
+      <a href="salary-calculator.html" class="">Salary Calculator</a>
+    </nav>
+
+    <section class="panel active" id="age">
+      <div class="field-row">
+        <label>Date of birth <input type="date" id="ageDob"></label>
+      </div>
+      <div class="result-grid">
+        <div class="result-card"><span>Exact age</span><strong id="ageExact">—</strong></div>
+        <div class="result-card"><span>Next birthday in</span><strong id="ageNextBday">—</strong></div>
+      </div>
+      <button class="copy-btn" data-copy-target="age">Copy result</button>
+    </section>
+  </section>
+
+  <article class="seo-content">
+    <h2>How exact age is calculated</h2>
+    <p>This calculator finds your exact age using calendar-based arithmetic — subtracting your birth date from today's date year by year, month by month, and day by day — rather than simply dividing total days lived by 365. This matters because months have different lengths and leap years add an extra day, so a naive day-count calculation can be off by several days.</p>
+    <h2>Why your next birthday countdown matters</h2>
+    <p>The countdown shows exactly how many days remain until your next birthday, accounting for whether it has already passed this year and rolling over to next year if so.</p>
+  </article>
+
+  <section class="faq-section">
+    <h2>Frequently asked questions</h2>
+    <div class="faq-item">
+        <h3>Why not just divide my age in days by 365?</h3>
+        <p>Because months vary in length and leap years add extra days, dividing by 365 can miscalculate your age by several days. Calendar-based subtraction is accurate.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What happens if I was born on February 29?</h3>
+        <p>In non-leap years, your birthday countdown rolls to the nearest equivalent date, since February 29 doesn't exist every year.</p>
+      </div>
+  </section>
+
+  <section class="related-tools">
+    <h2>Related calculators</h2>
+    <ul>
+        <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+        <li><a href="emi-calculator.html">EMI Calculator</a></li>
+        <li><a href="gst-calculator.html">GST Calculator</a></li>
+        <li><a href="discount-calculator.html">Discount Calculator</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>ReadReco Tools — built for speed, not sign-ups.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

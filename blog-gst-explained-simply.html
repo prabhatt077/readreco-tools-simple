@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GST Explained Simply: Adding, Removing, and the 4 Slabs | ReadReco Tools</title>
+<meta name="description" content="The difference between GST-exclusive and GST-inclusive prices, why you can't just subtract the percentage to reverse it, and India's 4 GST slabs explained.">
+<link rel="canonical" href="https://www.readreco.in/blog-gst-explained-simply.html">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="GST Explained Simply: Adding, Removing, and the 4 Slabs">
+<meta property="og:description" content="Why you can't just subtract a GST percentage to reverse it, and how the math actually works.">
+<meta property="og:url" content="https://www.readreco.in/blog-gst-explained-simply.html">
+
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "GST Explained Simply: Adding, Removing, and the 4 Slabs",
+  "description": "The math behind adding and removing GST, explained plainly.",
+  "author": { "@type": "Organization", "name": "ReadReco Tools" },
+  "publisher": { "@type": "Organization", "name": "ReadReco Tools" }
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">ReadReco<span>.</span></a>
+    <div class="nav-links">
+      <a href="blog.html">Blog</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☾</button>
+    </div>
+  </div>
+</header>
+
+<nav class="breadcrumb"><a href="index.html">Home</a> &rsaquo; <a href="blog.html">Blog</a> &rsaquo; GST Guide</nav>
+
+<article class="blog-article">
+  <h1>GST Explained Simply: Adding, Removing, and the 4 Slabs</h1>
+  <p class="blog-meta">Guide · ReadReco Tools</p>
+
+  <p>GST math trips people up in one specific place: reversing it. Adding GST is intuitive. Removing it from a price that already includes GST is where most people make a small but consistent mistake.</p>
+
+  <h2>Adding GST to a base price</h2>
+  <p>This part is straightforward. To add GST, multiply the base price by the GST rate (as a decimal) and add that to the base price.</p>
+  <p>Example: a ₹1,000 base price with 18% GST. GST amount = 1,000 × 0.18 = ₹180. Final price = ₹1,000 + ₹180 = ₹1,180.</p>
+
+  <h2>The mistake people make when removing GST</h2>
+  <p>Say you're handed a final price of ₹1,180 and you're told it already includes 18% GST. The instinct is to just subtract 18% of ₹1,180 — but that's wrong, and it undercounts the actual GST.</p>
+  <p>18% of ₹1,180 is ₹212.40, which would suggest a base price of ₹967.60. But we know from the example above that the correct base price was ₹1,000. The error happens because 18% needs to be calculated on the *base* price, not on the *final* price — and we don't know the base price yet, which is exactly what we're trying to find.</p>
+
+  <h2>The correct way to remove GST</h2>
+  <p>Divide the GST-inclusive price by (1 + GST rate as a decimal):</p>
+  <p><strong>Base price = Final price ÷ (1 + GST rate ÷ 100)</strong></p>
+  <p>For our ₹1,180 example at 18% GST: 1,180 ÷ 1.18 = ₹1,000 exactly. GST amount = ₹1,180 − ₹1,000 = ₹180.</p>
+
+  <h2>India's four GST slabs</h2>
+  <p>Most goods and services in India fall under one of four GST rates: 5%, 12%, 18%, and 28%. Essentials and daily-use items typically sit at the lower slabs, while luxury goods and select categories fall into the 28% bracket. The exact category-to-rate mapping is set by the GST Council and does change over time, so always check the current rate for your specific product or service rather than assuming.</p>
+
+  <div class="blog-cta">
+    <p>Skip the manual math — the <a href="gst-calculator.html">GST Calculator</a> handles both directions instantly, with one-click presets for all four standard slabs.</p>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <p>ReadReco Tools — built for speed, not sign-ups.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salary Calculator — Monthly to Annual & In-Hand Estimate | ReadReco Tools</title>
+<meta name="description" content="Free salary calculator to convert monthly salary to annual, and estimate in-hand salary after tax based on India's simplified New Tax Regime slabs.">
+<link rel="canonical" href="https://www.readreco.in/salary-calculator.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Salary Calculator — Monthly to Annual & In-Hand Estimate | ReadReco Tools">
+<meta property="og:description" content="Free salary calculator to convert monthly salary to annual, and estimate in-hand salary after tax based on India's simplified New Tax Regime slabs.">
+<meta property="og:url" content="https://www.readreco.in/salary-calculator.html">
+<meta property="og:site_name" content="ReadReco Tools">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Salary Calculator — Monthly to Annual & In-Hand Estimate | ReadReco Tools">
+<meta name="twitter:description" content="Free salary calculator to convert monthly salary to annual, and estimate in-hand salary after tax based on India's simplified New Tax Regime slabs.">
+
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Salary Calculator",
+  "url": "https://www.readreco.in/salary-calculator.html",
+  "description": "Free salary calculator to convert monthly salary to annual, and estimate in-hand salary after tax based on India's simplified New Tax Regime slabs.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this an exact tax calculation?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No — it's a simplified estimate using illustrative slab rates. Actual tax depends on deductions, exemptions, and your specific tax regime choice." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert my monthly salary to annual?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Multiply your monthly gross salary by 12 to get your annual gross salary." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">ReadReco<span>.</span></a>
+    <div class="nav-links">
+      <a href="blog.html">Blog</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☾</button>
+    </div>
+  </div>
+</header>
+
+<nav class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Salary Calculator</nav>
+
+<main>
+  <section class="hero mini-hero">
+    <h1>Salary Calculator</h1>
+    <p class="hero-sub">Enter your monthly gross salary to estimate your annual salary, tax, and in-hand take-home pay.</p>
+  </section>
+
+  <section class="tool-shell">
+    <nav class="tool-nav">
+      <a href="percentage-calculator.html" class="">Percentage Calculator</a>
+      <a href="emi-calculator.html" class="">EMI Calculator</a>
+      <a href="gst-calculator.html" class="">GST Calculator</a>
+      <a href="age-calculator.html" class="">Age Calculator</a>
+      <a href="discount-calculator.html" class="">Discount Calculator</a>
+      <a href="salary-calculator.html" class="current">Salary Calculator</a>
+    </nav>
+
+    <section class="panel active" id="salary">
+      <div class="field-grid">
+        <label>Monthly gross salary (₹) <input type="number" id="salMonthly" value="80000"></label>
+      </div>
+      <p class="disclaimer">Estimate only, based on India's simplified New Tax Regime slabs (illustrative — not filing-accurate, consult a tax professional for exact figures).</p>
+      <div class="result-grid">
+        <div class="result-card"><span>Annual gross</span><strong id="salAnnual">₹0</strong></div>
+        <div class="result-card"><span>Estimated annual tax</span><strong id="salTax">₹0</strong></div>
+        <div class="result-card"><span>Estimated in-hand (monthly)</span><strong id="salInHand">₹0</strong></div>
+      </div>
+      <button class="copy-btn" data-copy-target="salary">Copy result</button>
+    </section>
+  </section>
+
+  <article class="seo-content">
+    <h2>How this salary estimate works</h2>
+    <p>This tool converts your monthly gross salary to an annual figure, then applies a simplified version of India's New Tax Regime slabs to estimate your annual tax and in-hand monthly pay. It does not account for HRA, standard deductions, PF contributions, or other exemptions, so treat it as a rough estimate rather than an exact take-home figure.</p>
+    <h2>Why your actual in-hand pay may differ</h2>
+    <p>Real payslips include deductions like provident fund contributions, professional tax, and sometimes insurance premiums, none of which are modeled here. For an exact number, check your employer's payslip or consult a tax professional.</p>
+  </article>
+
+  <section class="faq-section">
+    <h2>Frequently asked questions</h2>
+    <div class="faq-item">
+        <h3>Is this an exact tax calculation?</h3>
+        <p>No — it's a simplified estimate using illustrative slab rates. Actual tax depends on deductions, exemptions, and your specific tax regime choice.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I convert my monthly salary to annual?</h3>
+        <p>Multiply your monthly gross salary by 12 to get your annual gross salary.</p>
+      </div>
+  </section>
+
+  <section class="related-tools">
+    <h2>Related calculators</h2>
+    <ul>
+        <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+        <li><a href="emi-calculator.html">EMI Calculator</a></li>
+        <li><a href="gst-calculator.html">GST Calculator</a></li>
+        <li><a href="age-calculator.html">Age Calculator</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>ReadReco Tools — built for speed, not sign-ups.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

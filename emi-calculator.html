@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EMI Calculator — Calculate Monthly Loan EMI & Total Interest | ReadReco Tools</title>
+<meta name="description" content="Free EMI calculator for home loans, car loans, and personal loans. Enter loan amount, interest rate, and tenure to see your monthly EMI instantly.">
+<link rel="canonical" href="https://www.readreco.in/emi-calculator.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="EMI Calculator — Calculate Monthly Loan EMI & Total Interest | ReadReco Tools">
+<meta property="og:description" content="Free EMI calculator for home loans, car loans, and personal loans. Enter loan amount, interest rate, and tenure to see your monthly EMI instantly.">
+<meta property="og:url" content="https://www.readreco.in/emi-calculator.html">
+<meta property="og:site_name" content="ReadReco Tools">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="EMI Calculator — Calculate Monthly Loan EMI & Total Interest | ReadReco Tools">
+<meta name="twitter:description" content="Free EMI calculator for home loans, car loans, and personal loans. Enter loan amount, interest rate, and tenure to see your monthly EMI instantly.">
+
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "EMI Calculator",
+  "url": "https://www.readreco.in/emi-calculator.html",
+  "description": "Free EMI calculator for home loans, car loans, and personal loans. Enter loan amount, interest rate, and tenure to see your monthly EMI instantly.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is EMI?",
+      "acceptedAnswer": { "@type": "Answer", "text": "EMI (Equated Monthly Installment) is the fixed monthly amount you pay to repay a loan, covering both principal and interest." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a longer tenure reduce my EMI?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, a longer tenure lowers the monthly EMI amount, but increases the total interest you pay over the life of the loan." }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if the interest rate is 0%?",
+      "acceptedAnswer": { "@type": "Answer", "text": "With 0% interest, EMI is simply the loan amount divided by the number of months, with no interest component." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">ReadReco<span>.</span></a>
+    <div class="nav-links">
+      <a href="blog.html">Blog</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☾</button>
+    </div>
+  </div>
+</header>
+
+<nav class="breadcrumb"><a href="index.html">Home</a> &rsaquo; EMI Calculator</nav>
+
+<main>
+  <section class="hero mini-hero">
+    <h1>EMI Calculator</h1>
+    <p class="hero-sub">Enter your loan amount, interest rate, and tenure — see your monthly EMI, total interest, and total payment instantly.</p>
+  </section>
+
+  <section class="tool-shell">
+    <nav class="tool-nav">
+      <a href="percentage-calculator.html" class="">Percentage Calculator</a>
+      <a href="emi-calculator.html" class="current">EMI Calculator</a>
+      <a href="gst-calculator.html" class="">GST Calculator</a>
+      <a href="age-calculator.html" class="">Age Calculator</a>
+      <a href="discount-calculator.html" class="">Discount Calculator</a>
+      <a href="salary-calculator.html" class="">Salary Calculator</a>
+    </nav>
+
+    <section class="panel active" id="emi">
+      <div class="field-grid">
+        <label>Loan amount (₹)
+          <input type="number" id="emiPrincipal" value="1000000">
+          <input type="range" id="emiPrincipalRange" min="10000" max="10000000" step="10000" value="1000000">
+        </label>
+        <label>Interest rate (% p.a.)
+          <input type="number" id="emiRate" value="9" step="0.1">
+          <input type="range" id="emiRateRange" min="1" max="20" step="0.1" value="9">
+        </label>
+        <label>Tenure (months)
+          <input type="number" id="emiTenure" value="60">
+          <input type="range" id="emiTenureRange" min="3" max="360" step="1" value="60">
+        </label>
+      </div>
+      <div class="result-grid">
+        <div class="result-card"><span>Monthly EMI</span><strong id="emiMonthly">₹0</strong></div>
+        <div class="result-card"><span>Total interest</span><strong id="emiInterest">₹0</strong></div>
+        <div class="result-card"><span>Total payment</span><strong id="emiTotal">₹0</strong></div>
+      </div>
+      <div class="bar-viz">
+        <div class="bar principal" id="emiBarPrincipal"></div>
+        <div class="bar interest" id="emiBarInterest"></div>
+      </div>
+      <div class="bar-legend"><span><i class="dot principal"></i> Principal</span><span><i class="dot interest"></i> Interest</span></div>
+      <button class="copy-btn" data-copy-target="emi">Copy result</button>
+    </section>
+  </section>
+
+  <article class="seo-content">
+    <h2>How EMI is calculated</h2>
+    <p>EMI stands for Equated Monthly Installment — the fixed amount you pay each month toward a loan until it's fully repaid. It's calculated using the formula EMI = P × r × (1+r)^N ÷ ((1+r)^N − 1), where P is your loan principal, r is the monthly interest rate (annual rate divided by 12 and by 100), and N is the number of monthly installments.</p>
+    <h2>Why EMI stays the same every month</h2>
+    <p>Even though EMI is fixed, the split between principal and interest changes over time — early payments are mostly interest, and later payments are mostly principal. That's why the total interest can look large on long-tenure loans even at a modest interest rate.</p>
+    <h2>Worked example</h2>
+    <p>On a ₹10,00,000 loan at 9% annual interest over 60 months, the EMI comes out to roughly ₹20,758, with total interest of about ₹2,45,000 over the life of the loan.</p>
+  </article>
+
+  <section class="faq-section">
+    <h2>Frequently asked questions</h2>
+    <div class="faq-item">
+        <h3>What is EMI?</h3>
+        <p>EMI (Equated Monthly Installment) is the fixed monthly amount you pay to repay a loan, covering both principal and interest.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does a longer tenure reduce my EMI?</h3>
+        <p>Yes, a longer tenure lowers the monthly EMI amount, but increases the total interest you pay over the life of the loan.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What happens if the interest rate is 0%?</h3>
+        <p>With 0% interest, EMI is simply the loan amount divided by the number of months, with no interest component.</p>
+      </div>
+  </section>
+
+  <section class="related-tools">
+    <h2>Related calculators</h2>
+    <ul>
+        <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+        <li><a href="gst-calculator.html">GST Calculator</a></li>
+        <li><a href="age-calculator.html">Age Calculator</a></li>
+        <li><a href="discount-calculator.html">Discount Calculator</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>ReadReco Tools — built for speed, not sign-ups.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

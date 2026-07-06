@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discount Calculator — Final Price & Amount Saved | ReadReco Tools</title>
+<meta name="description" content="Free discount calculator. Enter the original price and discount percentage to see the final price and how much you save, including stacked discounts.">
+<link rel="canonical" href="https://www.readreco.in/discount-calculator.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Discount Calculator — Final Price & Amount Saved | ReadReco Tools">
+<meta property="og:description" content="Free discount calculator. Enter the original price and discount percentage to see the final price and how much you save, including stacked discounts.">
+<meta property="og:url" content="https://www.readreco.in/discount-calculator.html">
+<meta property="og:site_name" content="ReadReco Tools">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Discount Calculator — Final Price & Amount Saved | ReadReco Tools">
+<meta name="twitter:description" content="Free discount calculator. Enter the original price and discount percentage to see the final price and how much you save, including stacked discounts.">
+
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Discount Calculator",
+  "url": "https://www.readreco.in/discount-calculator.html",
+  "description": "Free discount calculator. Enter the original price and discount percentage to see the final price and how much you save, including stacked discounts.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does a 20% discount plus a 10% discount equal 30% off?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Successive discounts multiply rather than add, so 20% then 10% off works out to 28% total savings, not 30%." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate the amount I saved?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Subtract the final price from the original price — that difference is your total savings." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">ReadReco<span>.</span></a>
+    <div class="nav-links">
+      <a href="blog.html">Blog</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☾</button>
+    </div>
+  </div>
+</header>
+
+<nav class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Discount Calculator</nav>
+
+<main>
+  <section class="hero mini-hero">
+    <h1>Discount Calculator</h1>
+    <p class="hero-sub">Enter the original price and discount percentage to see your final price and total savings instantly.</p>
+  </section>
+
+  <section class="tool-shell">
+    <nav class="tool-nav">
+      <a href="percentage-calculator.html" class="">Percentage Calculator</a>
+      <a href="emi-calculator.html" class="">EMI Calculator</a>
+      <a href="gst-calculator.html" class="">GST Calculator</a>
+      <a href="age-calculator.html" class="">Age Calculator</a>
+      <a href="discount-calculator.html" class="current">Discount Calculator</a>
+      <a href="salary-calculator.html" class="">Salary Calculator</a>
+    </nav>
+
+    <section class="panel active" id="discount">
+      <div class="field-grid">
+        <label>Original price (₹) <input type="number" id="discOriginal" value="2000"></label>
+        <label>Discount (%) <input type="number" id="discPercent" value="20"></label>
+      </div>
+      <label class="checkbox-row"><input type="checkbox" id="discStack"> Apply a second successive discount</label>
+      <div class="field-row" id="discStackRow" style="display:none">
+        <label>Second discount (%) <input type="number" id="discPercent2" value="10"></label>
+      </div>
+      <div class="result-grid">
+        <div class="result-card"><span>You save</span><strong id="discSaved">₹0</strong></div>
+        <div class="result-card"><span>Final price</span><strong id="discFinal">₹0</strong></div>
+      </div>
+      <button class="copy-btn" data-copy-target="discount">Copy result</button>
+    </section>
+  </section>
+
+  <article class="seo-content">
+    <h2>How discount calculations work</h2>
+    <p>The final price after a discount is the original price minus the discount amount, where the discount amount is the original price multiplied by the discount percentage divided by 100. A ₹2,000 item at 20% off saves you ₹400, for a final price of ₹1,600.</p>
+    <h2>Stacked discounts don't add up the way you'd expect</h2>
+    <p>If a store offers 20% off, then an additional 10% off the discounted price, the two discounts don't combine to 30% off. Instead, each discount applies to the already-reduced price, so the true combined discount is slightly less than 30% — the "Apply a second successive discount" option in this calculator handles that correctly.</p>
+  </article>
+
+  <section class="faq-section">
+    <h2>Frequently asked questions</h2>
+    <div class="faq-item">
+        <h3>Does a 20% discount plus a 10% discount equal 30% off?</h3>
+        <p>No. Successive discounts multiply rather than add, so 20% then 10% off works out to 28% total savings, not 30%.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I calculate the amount I saved?</h3>
+        <p>Subtract the final price from the original price — that difference is your total savings.</p>
+      </div>
+  </section>
+
+  <section class="related-tools">
+    <h2>Related calculators</h2>
+    <ul>
+        <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+        <li><a href="emi-calculator.html">EMI Calculator</a></li>
+        <li><a href="gst-calculator.html">GST Calculator</a></li>
+        <li><a href="age-calculator.html">Age Calculator</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>ReadReco Tools — built for speed, not sign-ups.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

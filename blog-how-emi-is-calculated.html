@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How EMI Is Actually Calculated (With the Full Formula) | ReadReco Tools</title>
+<meta name="description" content="A plain-English breakdown of the EMI formula — what P, r, and N mean, why the principal/interest split shifts each month, and a worked example.">
+<link rel="canonical" href="https://www.readreco.in/blog-how-emi-is-calculated.html">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="How EMI Is Actually Calculated (With the Full Formula)">
+<meta property="og:description" content="What P, r, and N mean in the EMI formula, and why your EMI stays flat while the interest/principal split shifts underneath it.">
+<meta property="og:url" content="https://www.readreco.in/blog-how-emi-is-calculated.html">
+
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How EMI Is Actually Calculated (With the Full Formula)",
+  "description": "A plain-English breakdown of the EMI formula and a worked example.",
+  "author": { "@type": "Organization", "name": "ReadReco Tools" },
+  "publisher": { "@type": "Organization", "name": "ReadReco Tools" }
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">ReadReco<span>.</span></a>
+    <div class="nav-links">
+      <a href="blog.html">Blog</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☾</button>
+    </div>
+  </div>
+</header>
+
+<nav class="breadcrumb"><a href="index.html">Home</a> &rsaquo; <a href="blog.html">Blog</a> &rsaquo; EMI Guide</nav>
+
+<article class="blog-article">
+  <h1>How EMI Is Actually Calculated (With the Full Formula)</h1>
+  <p class="blog-meta">Guide · ReadReco Tools</p>
+
+  <p>Every loan brochure shows you a monthly EMI number, but almost none of them show you how that number is actually produced. Once you see the formula, EMI stops feeling like a black box and starts feeling like ordinary arithmetic.</p>
+
+  <h2>The formula</h2>
+  <p>EMI is calculated as:</p>
+  <p><strong>EMI = P × r × (1 + r)^N ÷ ((1 + r)^N − 1)</strong></p>
+  <p>Three inputs feed this formula. <strong>P</strong> is the principal — the amount you're actually borrowing. <strong>r</strong> is the monthly interest rate, found by taking the annual rate, dividing by 12, and dividing by 100 to convert it to a decimal. <strong>N</strong> is the number of monthly installments, i.e. your tenure in months.</p>
+
+  <h2>Why the EMI stays flat but the loan doesn't feel flat</h2>
+  <p>Here's the part most people miss: even though you pay the same EMI every single month, the mix of principal and interest inside that payment changes constantly. In the early months, most of your EMI is interest, and only a small sliver chips away at the principal. By the final year of the loan, that flips — most of the payment is principal, and very little is interest.</p>
+  <p>This is simply because interest is charged on the *outstanding* balance each month. Early on, the outstanding balance is large, so the interest portion is large. As the balance shrinks, so does the interest charged on it, leaving more of the fixed EMI to go toward principal.</p>
+
+  <h2>A worked example</h2>
+  <p>Take a ₹10,00,000 loan at 9% annual interest over 60 months (5 years).</p>
+  <p>First, convert the annual rate to a monthly decimal rate: 9 ÷ 12 ÷ 100 = 0.0075.</p>
+  <p>Plug P = 1,000,000, r = 0.0075, N = 60 into the formula, and the EMI comes out to roughly ₹20,758 per month.</p>
+  <p>Over 60 months, that's a total payment of about ₹12,45,000 — meaning roughly ₹2,45,000 of the total is interest, even though the loan is only ₹10,00,000.</p>
+
+  <h2>What happens with a 0% interest loan</h2>
+  <p>If r is 0 (an interest-free loan or promotional financing), the formula above breaks down mathematically (dividing by zero), so it's handled as a special case: EMI simply becomes the principal divided by the number of months, since there's no interest to add.</p>
+
+  <div class="blog-cta">
+    <p>Want to plug in your own numbers instead of doing this by hand? Try the <a href="emi-calculator.html">EMI Calculator</a> — it uses this exact formula and updates instantly as you type, plus shows you the principal-vs-interest split visually.</p>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <p>ReadReco Tools — built for speed, not sign-ups.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
